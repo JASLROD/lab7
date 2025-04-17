@@ -4,8 +4,8 @@ import java.util.Arrays;
  * Driver for running and testing ArrayMethodsDemo
  * 
  * @author Rico Cassoni, rcassoni@sdccd.edu
- * @version v1.0
- * @since 2/14/2024
+ * @version v1.1
+ * @since 4/16/2024
  */
 public class ArrayMethodsDemo  //change name to Main and rename file to Main.java for Replit or MyProgram for codeHS
 {
@@ -14,7 +14,7 @@ public class ArrayMethodsDemo  //change name to Main and rename file to Main.jav
         System.out.println("Lab7 Pt1 - Let's get ready to rumble :-)");
         System.out.println("========================================");
         System.out.println("myArray[] has " + test.count() + " elements");
-        System.out.println("The sum of all elements in myArray[] is: " + test.sum());
+        // System.out.println("The sum of all elements in myArray[] is: " + test.sum());
         // System.out.printf("The avg of all elements in myArray[] is: %.2f\n", test.average());
         // System.out.println("The largest number in myArray[] is: " + test.findMax());
         // System.out.println("The index of the largest number in myArray[] is: " + test.findIndexOfMax());
@@ -45,9 +45,5 @@ public class ArrayMethodsDemo  //change name to Main and rename file to Main.jav
         // anotherCopyOfMyArray = test.reverseArray(anotherCopyOfMyArray);
         // System.out.print("anotherCopyOfMyArray[] reversed is: ");
         // test.print(anotherCopyOfMyArray);
-        // System.out.println();
-        // test.genFiveByFiveRows();
-        // System.out.println();
-        // test.genFiveByFiveCols();
-    // }
+    }
 }

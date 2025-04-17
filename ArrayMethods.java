@@ -27,3 +27,17 @@ public class ArrayMethods
         average = (double)sum()/count();
         return average; // short cut retun (double) sum()/count();
     }
+
+    public int Max(){//+ findMax (): int 
+        int Max = myArray[0];
+        int index = 0;
+        for (0<myArray.length)
+        if (myArray[i]>Max0{
+            Max = myArray[i];
+            index = i;
+        }
+        
+        
+        
+        return Max; // short cut retun (double) sum()/count();    
+    }
