@@ -1,4 +1,4 @@
-
+import java.util.Arrays;
 /**
  * Write a description of class ArrayMethods here.
  *
@@ -25,27 +25,28 @@ public class ArrayMethods
     }
 
     public double average(){//+ average (): double
+        double average = 0;
         average = (double)sum()/count();
         return average; // short cut retun (double) sum()/count();
     }
 
     public int findMax(){//+ findMax (): int 
-        int Max = myArray[0];
+        int max = myArray[0];
         for (int i=1; i< myArray.length; i++){
-            if (myArray[i]>Max){
-                Max = myArray[i];
+            if (myArray[i]>max){
+                max = myArray[i];
             }
         }
 
-        return Max; // short cut retun (double) sum()/count();    
+        return max; // short cut retun (double) sum()/count();    
     }
 
     public int findIndexOfMax(){//+findIndexOfMax (): int
-        int Max = myArray[0];
+        int max = myArray[0];
         int index = 0;
         for (int i=1; i< myArray.length; i++){
-            if (myArray[i]>Max){
-                Max = myArray[i];  
+            if (myArray[i]>max){
+                max = myArray[i];  
                 index = i;
             }
         }
@@ -53,17 +54,17 @@ public class ArrayMethods
     }
 
     public int findLast(int key){//+findLast (int key): int
-        int Last = -1;
+        int index = -1;
         int i = myArray.length-1;
         boolean found = false;
         while(!found && i>=0){
             if(myArray[i]==key){
                 found = true;
-                Last = i;
-            }
-            int index=-1;
-        }
-        return Last;
+                index = i;
+            }//end if
+            i--;
+        }//end wile
+        return index;
     }
 
     public int[] findAll (int key){//+findAll(int key): int [ ] 
@@ -95,14 +96,23 @@ public class ArrayMethods
         return copy;
     }
 
-    public void print(int[] inArray){//+print(int [ ] a): void
+    
+    /**
+    prints an int array, nicely formatted
+    @param inArray int array to print
+     */
+    public void print(int[ ] inArray)//+print(int [ ] a): void
+    {
         System.out.print("{");
         int i;
-        for(i =0 ; i < inArray.length-1; i++)
-            System.out.print(inArray[i] +",");
-        if (inArray.length> 0 )
+        // print elements before the last, separated by commas
+        for (i = 0; i < inArray.length - 1; i++)
+            System.out.print(inArray[i] + ", ");
+        // print last element. Careful here to handle length 0
+        if (inArray.length > 0)
             System.out.print(inArray[i]);
         System.out.println("}");
     }
 }
+
 
