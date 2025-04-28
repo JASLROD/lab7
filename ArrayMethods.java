@@ -7,8 +7,8 @@ import java.util.Arrays;
  * locating specific elements, copying arrays, and printing arrays.
  * 
  * @author Jasmin Leonrodriguez, jleonrodriquez@student.sdccd.edu
- * @version v1.0
- * @since 4/22/2025
+ * @version v1.1
+ * @since 4/27/2025
  */
 public class ArrayMethods
 {
@@ -164,5 +164,38 @@ public class ArrayMethods
             System.out.print(inArray[i]);
         System.out.println("}");
     }
+
+    /**
+     * Sorts the given integer array in ascending order using a basic sorting algorithm.
+     * 
+     * @param inArray the array of integers to be sorted in ascending order 
+     */
+    public void sortArray(int[] inArray){//+sortArray (int [ ] inArray): void
+        for(int i=0;i< inArray.length-1;i++)
+            for(int j=i+1; j< inArray.length;j++)
+                if(inArray[j]<inArray[i]){
+                    int temp = inArray[j];
+                    inArray[j] = inArray[i];
+                    inArray[i] = temp;
+                }
+    }
+
+    /**
+     * Creates and returns a new array that contains the elements of the input array in reverse order.
+     * 
+     * @param inArray the array of integers to be reversed
+     * @return a new array containing the elements of inArray in reverse order
+     */
+    public int[] reverseArray(int[] inArray){//+reverseArray(int[ ] inArray): int[ ]
+        int[] newArray = new int[inArray.length];
+        int index = 0;
+        for(int i = inArray.length-1; i>=0;i--){
+            newArray[index] = inArray[i];
+            index++;
+        }
+        return newArray;
+
+    }
 }
+
 
